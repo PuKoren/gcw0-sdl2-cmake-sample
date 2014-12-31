@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Project
+Comment=An open-source project
+MimeType=application/zip;
+Exec=run_program.sh
+Terminal=false
+Type=Application
+StartupNotify=false
+Icon=image
+Categories=games

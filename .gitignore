@@ -26,3 +26,12 @@
 *.exe
 *.out
 *.app
+
+# Build directories
+build
+build_gcw0
+
+# Project data for opk, and temp binary copies
+cmake/gcw-zero/opk-data/data
+cmake/gcw-zero/opk-data/project
+cmake/gcw-zero/project.opk
