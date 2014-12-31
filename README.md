@@ -19,7 +19,8 @@ To compile for the GCW0, run
 
 To generate the .opk file to be uploaded to your GCW0, run
 
-    sh cmake/gcw-zero/opk_build.sh
+    cd cmake/gcw-zero
+    sh opk_build.sh
 
 You can find the various build steps for the gcw0 (from cmake to generating opk) in the build_gcw.sh file.  
 
