@@ -2,7 +2,7 @@
 Name=Project
 Comment=An open-source project
 MimeType=application/zip;
-Exec=run_program.sh
+Exec=project
 Terminal=false
 Type=Application
 StartupNotify=false
