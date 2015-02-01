@@ -5,7 +5,7 @@
 SDL_Window* m_window;
 SDL_Renderer* m_renderer;
 
-int main(int argc, char** argv){
+int main(){
 
   if(SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO) != 0){
     std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
@@ -44,6 +44,8 @@ int main(int argc, char** argv){
         run = false;
       }
     }
+    SDL_RenderClear(m_renderer);
+    SDL_RenderPresent(m_renderer);
   }
 
   TTF_Quit();
