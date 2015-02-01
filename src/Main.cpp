@@ -12,7 +12,7 @@ int main(int argc, char** argv){
     return false;
   }
 
-  m_window = SDL_CreateWindow("Me versus It", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 320, 240, SDL_WINDOW_SHOWN);
+  m_window = SDL_CreateWindow("GCW0 - SDL2", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 320, 240, SDL_WINDOW_SHOWN);
   if (m_window == nullptr){
     std::cout << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
     return false;
@@ -30,21 +30,21 @@ int main(int argc, char** argv){
   }
 
   SDL_RenderSetLogicalSize(m_renderer, 320, 240);
-    SDL_SetRenderDrawColor(m_renderer, 0, 0, 0, 255);
-    SDL_ShowCursor(SDL_DISABLE);
+  SDL_SetRenderDrawColor(m_renderer, 0, 0, 0, 255);
+  SDL_ShowCursor(SDL_DISABLE);
 
-    bool run = true;
+  bool run = true;
 
-    SDL_Event event;    
-    while(run){
-      while (SDL_PollEvent(&event)) {
-        if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE){
-          run = false;
-        } else if(event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE){
-          run = false;
-        }
+  SDL_Event event;
+  while(run){
+    while (SDL_PollEvent(&event)) {
+      if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE){
+        run = false;
+      } else if(event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE){
+        run = false;
       }
     }
+  }
 
   TTF_Quit();
   SDL_DestroyRenderer(m_renderer);
