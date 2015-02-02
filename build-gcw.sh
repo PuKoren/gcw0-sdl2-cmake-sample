@@ -16,5 +16,6 @@ if [ -z ${2+x} ]; then
   echo "'$2' is unset, please provide the GCW0's IP";
 else
   echo "Uploading OPK...";
-  scp "$1.opk" root@$2:/media/data/apps/
+  scp $1.opk root@$2:/media/data/apps/
+  rm $1.opk
 fi
