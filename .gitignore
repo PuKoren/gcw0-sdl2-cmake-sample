@@ -31,6 +31,9 @@
 build
 build_gcw0
 
+# Qtcreator trash
+CMakeLists.txt.user
+
 # Project data for opk, and temp binary copies
 cmake/gcw-zero/opk-data/data
 cmake/gcw-zero/opk-data/project
